@@ -1,13 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 
+import Items from './Items';
+
 import { BiSearch } from 'react-icons/bi';
 
 const SearchBar = () => {
   const [events, setEvents] = useState([]);
   const [performers, setPerformers] = useState([]);
   const [venues, setVenues] = useState([]);
-  const [showItems, setShowItems] = useState(false)
+  const [showItems, setShowItems] = useState(false);
 
   function handleInputChange(input) {
     if(!input) {
@@ -40,44 +42,7 @@ const SearchBar = () => {
           onChange={e => handleInputChange(e.target.value)}
         />
       </div>
-
-      <div style={{visibility: showItems ? 'visible' : 'hidden' }} className="items-container">
-        {events.slice(0, 3).map((event, i) => {
-          return (
-          <div className="item-container" key={i}>
-            <img className="item-image" src={event.event.map_url} alt="event" />
-            <div className="item-description">
-              <p className="item-title">{event.event.name}</p>
-              <p className="item-subtitle">{event.venue.name}</p>
-            </div>
-          </div>
-          )
-        })}
-
-        {performers.slice(0, 3).map((performer, i) => {
-          return (
-            <div className="item-container" key={i}>
-              <img className="item-image" src={performer.hero_image_url} alt="performer" />
-              <div className="item-description">
-                <p className="item-title">{performer.name}</p>
-                <p className="item-subtitle uppercase">{performer.category}</p>
-              </div>
-            </div>
-          )
-        })}
-
-        {venues.slice(0, 3).map((venue, i) => {
-          return (
-            <div className="item-container" key={i}>
-              <img className="item-image" src={venue.image_url} alt="venue" />
-              <div className="item-description">
-                <p className="item-title">{venue.name}</p>
-                <p className="item-subtitle">{venue.city}</p>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+      <Items events={events} performers={performers} venues={venues} showItems={showItems} />
     </div>
   );
 };
