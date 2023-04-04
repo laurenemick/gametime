@@ -1,35 +1,12 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import React from 'react';
 
+import { fetchSearchResults } from '../app/actions';
 import Items from './Items';
 
 import { BiSearch } from 'react-icons/bi';
 
-const SearchBar = () => {
-  const [events, setEvents] = useState([]);
-  const [performers, setPerformers] = useState([]);
-  const [venues, setVenues] = useState([]);
-  const [showItems, setShowItems] = useState(false);
-
-  function handleInputChange(input) {
-    if(!input) {
-      setEvents([]);
-      setPerformers([]);
-      setVenues([]);
-      setShowItems(false);
-    } else {
-      axios(`https://mobile-staging.gametime.co/v1/search?q=${input}`)
-        .then((res) => {
-          setEvents(res.data.events);
-          setPerformers(res.data.performers);
-          setVenues(res.data.venues);
-          setShowItems(true);
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-    }
-  }
+const SearchBar = props => {
 
   return (
     <div className="seach-bar">
@@ -39,12 +16,29 @@ const SearchBar = () => {
           className="search-input"
           type="text"
           placeholder="Event, performer or venue"
-          onChange={e => handleInputChange(e.target.value)}
+          onChange={e => props.fetchSearchResults(e.target.value)}
         />
       </div>
-      <Items events={events} performers={performers} venues={venues} showItems={showItems} />
+      <Items />
     </div>
   );
 };
 
-export default SearchBar;
+const mapStateToProps = state => {
+  return {
+    events: state.events,
+    performers: state.performers,
+    venues: state.venues,
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    fetchSearchResults: (input) => { dispatch(fetchSearchResults(input)) },
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SearchBar);
