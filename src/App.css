@@ -1,39 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  margin: 2% 8%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+h2 {
+  font-size: 2em;
 }
 
-.App-header {
-  min-height: 100vh;
+h4 {
+  font-size: 1.6em;
+}
+
+p, button {
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+/* SEARCH */
+.seach-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.input-container {
+  width: 65%;
+  position: relative;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.search-icon {
+  height: 3em;
+  width: 3em;
+  padding: 6px;
+  position: absolute;
+  top:50%;
+  left:2px;
+  transform: translateY(-50%);
+}
+
+.search-input {
+  border-radius: 50px;
+  width: 100%;
+  border: 2px solid #808080;
+  padding: 1%;
+  padding-left: 2.5em;
+}
+
+.items-container {
+  width: 60%;
+  border: 1px solid #808080;
+}
+
+.items-container:active {
+  border: 0;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border-bottom: 1px solid #808080;
+  padding: 6px;
+  margin: 4px 12px;
+}
+
+.item-container:last-child {
+  border-bottom: 0;
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+  object-fit: cover;
+}
+
+.item-description {
+  align-items: center;
+}
+
+.item-title {
+  font-size: 1.4em;
+}
+
+.item-subtitle {
+  color: #808080;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
