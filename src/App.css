@@ -146,11 +146,11 @@ html {
   font-weight: 500;
 }
 
-h2 {
+h1 {
   font-size: 2em;
 }
 
-h4 {
+h2 {
   font-size: 1.6em;
 }
 
@@ -189,6 +189,7 @@ p, button {
   padding-left: 2.5em;
 }
 
+/* ITEMS */
 .items-container {
   width: 60%;
   border: 1px solid #808080;
@@ -198,6 +199,7 @@ p, button {
   border: 0;
 }
 
+/* ITEM */
 .item-container {
   display: flex;
   align-items: center;
@@ -232,4 +234,22 @@ p, button {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+/* ITEM DETAILS */
+.details-title  {
+  padding: 20px 0;
+}
+
+.details-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.button {
+  margin-top: 40px;
+  border-radius: 20px;
+  width: 80px;
+  padding: 2px 0;
 }

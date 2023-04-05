@@ -1,5 +1,5 @@
-import { connect } from 'react-redux';
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { fetchSearchResults } from '../app/actions';
 import Items from './Items';
@@ -24,21 +24,7 @@ const SearchBar = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    events: state.events,
-    performers: state.performers,
-    venues: state.venues,
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return{
-    fetchSearchResults: (input) => { dispatch(fetchSearchResults(input)) },
-  };
-};
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
+  null,
+  { fetchSearchResults },
 )(SearchBar);

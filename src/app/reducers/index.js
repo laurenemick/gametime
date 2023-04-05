@@ -1,4 +1,4 @@
-import { REQUEST_SEARCH_DATA, RECEIVE_SEARCH_DATA } from "../actions";
+import { REQUEST_SEARCH_DATA, RECEIVE_SEARCH_DATA, SET_CURR_ITEM } from '../actions';
 
 export const initialState = {
   events: [],
@@ -7,6 +7,12 @@ export const initialState = {
   showItems: false,
   isError: false,
   errorMsg: "",
+  currItem: {
+    id: "",
+    image: "", 
+    title: "",
+    subtitle: "",
+  },
 };
 
 export const reducer = (state = initialState, action) => {
@@ -29,6 +35,17 @@ export const reducer = (state = initialState, action) => {
           errorMsg: action.errorMsg,
       };
       
+    case SET_CURR_ITEM:
+      return {
+        ...state,
+        currItem: {
+          id: action.obj.id,
+          image: action.obj.image, 
+          title: action.obj.title,
+          subtitle: action.obj.subtitle,
+        }
+    };
+
     default:
       return state;
   }

@@ -48,3 +48,205 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+   
+   "display_groups": [
+      {
+         "display_name": "Top Result",
+         "slug": "top_pick",
+         "sort_order": 0
+      },
+      {
+         "display_name": "Performers",
+         "slug": "performers",
+         "sort_order": 1
+      },
+      {
+         "display_name": "Venues",
+         "slug": "venues",
+         "sort_order": 2
+      },
+      {
+         "display_name": "Events",
+         "slug": "events",
+         "sort_order": 3
+      }
+   ]
+
+    "events": [
+      {
+         "event": {
+            "banner": {
+               "headline": "",
+               "subtitle": "",
+               "emoji": ""
+            },
+            "category": "music",
+            "center_court": {
+               "x": 133,
+               "y": 119,
+               "width": 11,
+               "height": 9
+            },
+            "datetime_local": "2023-04-16T20:00:00",
+            "datetime_utc": "2023-04-17T00:00:00",
+            "id": "637e53e618264c000105ece1",
+            "map_url": "https://maps.gametime.co/v2/grog_shop/music/music-8.png",
+            "min_price": {
+               "total": 0,
+               "prefee": 0
+            },
+            "name": "Michigander",
+            "performers": [
+               {
+                  "id": "633f1c3ab3c3d500011f5931",
+                  "primary": true
+               },
+               {
+                  "id": "633f1c3ab3c3d500011f5931",
+                  "primary": false
+               }
+            ],
+            "sales_cut_off": "2023-04-17T01:30:00Z",
+            "section_map_id": "5a208a799da0d48c0d697683",
+            "tbd": false,
+            "time_tbd": false,
+            "date_tbd": false,
+            "venue_id": "5a204fdb99b284000fe3b6d1",
+            "venue_config": "music",
+            "related_events": {}
+         },
+         "performers": [
+            {
+               "abbrev": "MICHIGANDER",
+               "category": "music",
+               "category_group": "concert",
+               "contrast_color": "",
+               "display_type": "performer_at_venue",
+               "id": "633f1c3ab3c3d500011f5931",
+               "hero_image_url": "https://images.gametime.co/musicmichigander/hero@4x.jpg",
+               "medium_name": "Michigander",
+               "name": "Michigander",
+               "primary_color": "f5a623FF",
+               "short_name": "Michigander",
+               "slug": "musicmichigander",
+               "meta": {
+                  "score_boost": null
+               }
+            },
+            {
+               "abbrev": "MICHIGANDER",
+               "category": "music",
+               "category_group": "concert",
+               "contrast_color": "",
+               "display_type": "performer_at_venue",
+               "id": "633f1c3ab3c3d500011f5931",
+               "hero_image_url": "https://images.gametime.co/musicmichigander/hero@4x.jpg",
+               "medium_name": "Michigander",
+               "name": "Michigander",
+               "primary_color": "f5a623FF",
+               "short_name": "Michigander",
+               "slug": "musicmichigander",
+               "meta": {
+                  "score_boost": null
+               }
+            }
+         ],
+         "venue": {
+            "city": "Cleveland",
+            "id": "5a204fdb99b284000fe3b6d1",
+            "location": {
+               "lat": 41.5084,
+               "lon": -81.5805
+            },
+            "name": "Grog Shop",
+            "show_currency": false,
+            "slug": "grog_shop",
+            "state": "OH",
+            "timezone": "America/New_York",
+            "metro": "cleveland",
+            "image_url": "https://maps.gametime.co/v2/grog_shop/music/music-8.png",
+            "meta": {
+               "score_boost": null
+            }
+         },
+         "meta": {
+            "search_score": 39.18285,
+            "sort_order": 1,
+            "display_group": "top_pick",
+            "popularity_score": 0,
+            "score_boost": 0
+         }
+      },
+    ]
+
+
+    "performers": [
+      {
+         "abbrev": "MICHIGANDER",
+         "category": "music",
+         "category_group": "concert",
+         "contrast_color": "",
+         "display_type": "performer_at_venue",
+         "id": "633f1c3ab3c3d500011f5931",
+         "hero_image_url": "https://images.gametime.co/musicmichigander/hero@4x.jpg",
+         "medium_name": "Michigander",
+         "name": "Michigander",
+         "primary_color": "f5a623FF",
+         "short_name": "Michigander",
+         "slug": "musicmichigander",
+         "meta": {
+            "search_score": 41.032135,
+            "sort_order": 0,
+            "display_group": "performers",
+            "popularity_score": 0,
+            "score_boost": 0
+         }
+      },
+      {
+         "abbrev": "MICH",
+         "category": "cbs",
+         "category_group": "sport",
+         "contrast_color": "",
+         "display_type": "performer_vs_performer",
+         "id": "5c369003c27a15001703204d",
+         "hero_image_url": "https://images.gametime.co/cbsmich/hero@4x.jpg",
+         "medium_name": "MICH Wolverines",
+         "name": "Michigan Baseball",
+         "primary_color": "4a90e2FF",
+         "short_name": "Wolverines",
+         "slug": "cbsmich",
+         "meta": {
+            "search_score": 24.658955,
+            "sort_order": 7,
+            "display_group": "performers",
+            "popularity_score": 0,
+            "score_boost": 0
+         }
+      }
+   ]
+
+
+   "venues": [
+      {
+         "city": "Ann Arbor",
+         "id": "598387bd9da0d48c0d7eb8b6",
+         "location": {
+            "lat": 42.2795,
+            "lon": -83.7418
+         },
+         "name": "Michigan Theater",
+         "show_currency": false,
+         "slug": "michigan_theater",
+         "state": "MI",
+         "timezone": "America/Chicago",
+         "metro": "detroit",
+         "image_url": "https://maps.gametime.co/v2/michigan_theater/music/music-8.png",
+         "meta": {
+            "search_score": 23.949194,
+            "sort_order": 9,
+            "display_group": "venues",
+            "popularity_score": 0,
+            "score_boost": 0
+         }
+      },
+    ]

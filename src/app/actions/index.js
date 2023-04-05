@@ -1,16 +1,17 @@
 import axios from 'axios';
 
-export const REQUEST_SEARCH_DATA = "REQUEST_SEARCH_DATA";
-export const RECEIVE_SEARCH_DATA = "RECEIVE_SEARCH_DATA";
+export const REQUEST_SEARCH_DATA = 'REQUEST_SEARCH_DATA';
+export const RECEIVE_SEARCH_DATA = 'RECEIVE_SEARCH_DATA';
+export const SET_CURR_ITEM = 'SET_CURR_ITEM';
 
 export const fetchSearchResults = input => async dispatch => {
   dispatch({
     type: "REQUEST_SEARCH_DATA"
   });
-  console.log("hit fetch api")
+
   try {
     const json = await axios.get(`https://mobile-staging.gametime.co/v1/search?q=${input}`)
-    console.log("json", json.data)
+
     dispatch({
       type: "RECEIVE_SEARCH_DATA",
       events: json.data.events,
@@ -31,4 +32,8 @@ export const fetchSearchResults = input => async dispatch => {
       errorMsg: e,
     });
   }
+};
+
+export const setCurrItem = obj => {
+  return { type: SET_CURR_ITEM, obj};
 };
