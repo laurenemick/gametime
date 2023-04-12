@@ -6,7 +6,7 @@ import { setCurrItem } from '../app/actions';
 
 const Item = ({id, image, title, subtitle }) => {
   const dispatch = useDispatch();
-
+  console.log("hit item component")
   return (
     <Link to={`/item/${id}`} onClick={() => dispatch(setCurrItem({id, image, title, subtitle}))}>
       <div className="item-container" key={id}>

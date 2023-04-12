@@ -15,11 +15,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exact element={<SearchBar />} />
-          <Route path="/item/:id" element={<ItemDetails />}/>
+          <Route path="/item/:id" element={<ItemDetails />} />
         </Routes>
       </Router>
     </div>
   );
-}
+};
 
 export default App;

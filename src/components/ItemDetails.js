@@ -10,7 +10,7 @@ const ItemDetails = () => {
 
   return (
     <div>
-      <div className="item-details">
+      <div className="item-details" key={id}>
         <img className="details-image" src={image} alt="event" />
         <h1 className="details-title">{title}</h1>
         <h2 className="details-subtitle">{subtitle}</h2>
